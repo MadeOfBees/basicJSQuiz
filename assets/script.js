@@ -14,10 +14,17 @@ function highScore(){
 }
 
 function buzzBuzz(){
-    console.log("                .' '.            __");
-    console.log("       .        .   .           (__\_");
-    console.log("        .         .         . -{{_(|8)");
-    console.log("          ' .  . ' ' .  . '     (__/" );
-    console.log("ACSII BY LOAN STARK ON ASCII ART ARCHIVE");
+    console.log("              \     /              ");
+    console.log("          \    o ^ o    /          ");
+    console.log("            \ (     ) /            ");
+    console.log(" ____________(%%%%%%%)____________ ");
+    console.log("(     /   /  )%%%%%%%(  \   \     )");
+    console.log("(___/___/__/           \__\___\___)");
+    console.log("   (     /  /(%%%%%%%)\  \     )   ");
+    console.log("    (__/___/ (%%%%%%%) \___\__)    ");
+    console.log("            /(       )\            ");
+    console.log("          /   (%%%%%)   \          ");
+    console.log("               (%%%)               ");
+    console.log("                 !                 ");
+    console.log("Bzzz site MadeOfBees");
 }
-
