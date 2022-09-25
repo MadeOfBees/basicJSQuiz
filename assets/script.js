@@ -1,22 +1,17 @@
 var startBtn = document.getElementById('start');
 var hsBtn = document.getElementById('hs');
-var beeBtn = document.getElementById('bee');
+// Ignore line 4
+document.getElementById('bee').addEventListener("click", function(){console.log("          __         .' '.        ");console.log("        _/__)        .   .       .");console.log("       (8|)_}}- .      .        . ");console.log("        `\\__)    '. . ' ' .  . ' ");console.log("Bzzz site MadeOfBees              ");});
+var title = document.getElementById('tScreen');
 startBtn.addEventListener("click", startGame);
 hsBtn.addEventListener("click", highScore);
-beeBtn.addEventListener("click", buzzBuzz);
+
+title.text("TITLE SCREEN");
 
 function startGame(){
-    console.log("press the button to begin")
+    title.text("PLEASE");
 }
 
 function highScore(){
     console.log("the other button")
-}
-
-function buzzBuzz(){
-    console.log("          __         .' '.");
-    console.log("        _/__)        .   .       .");
-    console.log("       (8|)_}}- .      .        .");
-    console.log("        `\\__)    '. . ' ' .  . '");
-    console.log("Bzzz site MadeOfBees");
 }
