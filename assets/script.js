@@ -14,17 +14,9 @@ function highScore(){
 }
 
 function buzzBuzz(){
-    console.log("              \     /              ");
-    console.log("          \    o ^ o    /          ");
-    console.log("            \ (     ) /            ");
-    console.log(" ____________(%%%%%%%)____________ ");
-    console.log("(     /   /  )%%%%%%%(  \   \     )");
-    console.log("(___/___/__/           \__\___\___)");
-    console.log("   (     /  /(%%%%%%%)\  \     )   ");
-    console.log("    (__/___/ (%%%%%%%) \___\__)    ");
-    console.log("            /(       )\            ");
-    console.log("          /   (%%%%%)   \          ");
-    console.log("               (%%%)               ");
-    console.log("                 !                 ");
+    console.log("          __         .' '.");
+    console.log("        _/__)        .   .       .");
+    console.log("       (8|)_}}- .      .        .");
+    console.log("        `\\__)    '. . ' ' .  . '");
     console.log("Bzzz site MadeOfBees");
 }
