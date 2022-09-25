@@ -5,13 +5,19 @@ document.getElementById('bee').addEventListener("click", function(){console.log(
 var title = document.getElementById('tScreen');
 startBtn.addEventListener("click", startGame);
 hsBtn.addEventListener("click", highScore);
+var playerScores;
+var gameState = "TITLESCREEN"
 
-title.text("TITLE SCREEN");
+title.append(gameState);
 
-function startGame(title){
-    title.text("PLEASE");
+function startGame(gameState){
+
+    gameState = ("Welcome Player")
+    title.text(gameState);
 }
 
 function highScore(){
-    console.log("the other button")
+    gameState = ("High scores")
+
+    title.text(gameState);
 }
