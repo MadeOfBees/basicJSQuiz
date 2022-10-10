@@ -53,8 +53,7 @@ mainScreen.replaceWith(gameState);
 
 function highScore(gameState) {
     window.location.replace("./highScores.html");
-    gameState = ("High scores")
-    mainScreen.replaceWith = (gameState);
+    mainScreen.replaceWith = ("High scores:");
     high1.replaceWith(hi1);
     high2.replaceWith(hi2);
     high3.replaceWith(hi3);
