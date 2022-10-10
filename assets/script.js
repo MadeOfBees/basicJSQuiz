@@ -73,27 +73,120 @@ function init() {
 function highScore() {
     mainScreen.textContent = ("High scores:");
     smallScreen.style.listStyle = "square inside"
-    high1.append(hi1);
-    high2.append(hi2);
-    high3.append(hi3);
-    high4.append(hi4);
-    high5.append(hi5);
-    high6.append(hi6);
-    high7.append(hi7);
-    high8.append(hi8);
-    high9.append(hi9);
-    high10.append(hi10);
+    high1.textContent=(hi1);
+    high2.textContent=(hi2);
+    high3.textContent=(hi3);
+    high4.textContent=(hi4);
+    high5.textContent=(hi5);
+    high6.textContent=(hi6);
+    high7.textContent=(hi7);
+    high8.textContent=(hi8);
+    high9.textContent=(hi9);
+    high10.textContent=(hi10);
 }
 
 
 function startGame() {
     smallScreen.style.listStyle = "square inside"
+    // how abt you pull these names from an array? 
     mainScreen.textContent = (quest1.question);
-    an1.append(quest1.ans1);
-    an2.append(quest1.ans2);
-    an3.append(quest1.ans3);
-    an4.append(quest1.ans4);
-    an3.addEventListener("click", function () { console.log(`3`) });
+    an1.textContent=(quest1.ans1);
+    an2.textContent=(quest1.ans2);
+    an3.textContent=(quest1.ans3);
+    an4.textContent=(quest1.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
 }
-
+function lv2(){
+    an1.textContent=(quest2.ans1);
+    an2.textContent=(quest2.ans2);
+    an3.textContent=(quest2.ans3);
+    an4.textContent=(quest2.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv3(){
+    an1.textContent=(quest3.ans1);
+    an2.textContent=(quest3.ans2);
+    an3.textContent=(quest3.ans3);
+    an4.textContent=(quest3.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv4(){
+    an1.textContent=(quest4.ans1);
+    an2.textContent=(quest4.ans2);
+    an3.textContent=(quest4.ans3);
+    an4.textContent=(quest4.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv5(){
+    an1.textContent=(quest5.ans1);
+    an2.textContent=(quest5.ans2);
+    an3.textContent=(quest5.ans3);
+    an4.textContent=(quest5.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv6(){
+    an1.textContent=(quest6.ans1);
+    an2.textContent=(quest6.ans2);
+    an3.textContent=(quest6.ans3);
+    an4.textContent=(quest6.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv7(){
+    an1.textContent=(quest7.ans1);
+    an2.textContent=(quest7.ans2);
+    an3.textContent=(quest7.ans3);
+    an4.textContent=(quest7.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv8(){
+    an1.textContent=(quest8.ans1);
+    an2.textContent=(quest8.ans2);
+    an3.textContent=(quest8.ans3);
+    an4.textContent=(quest8.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv9(){
+    an1.textContent=(quest9.ans1);
+    an2.textContent=(quest9.ans2);
+    an3.textContent=(quest9.ans3);
+    an4.textContent=(quest9.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
+function lv10(){
+    an1.textContent=(quest10.ans1);
+    an2.textContent=(quest10.ans2);
+    an3.textContent=(quest10.ans3);
+    an4.textContent=(quest10.ans4);
+    an1.addEventListener("click", function () { console.log(`1`) });
+    an2.addEventListener("click", function () { console.log(`2`)});
+    an3.addEventListener("click", function () { console.log(`3`)});
+    an4.addEventListener("click", function () { console.log(`4`)});
+}
 init();
