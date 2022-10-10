@@ -1,7 +1,7 @@
 var playerScores;
 var gameState = "Super JSquiz Bros"
-var smallScreen = document.getElementById('mScreen');
-var mainScreen = document.getElementById('lScreen');
+var smallScreen = document.getElementById('lScreen');
+var mainScreen = document.getElementById('mScreen');
 var startBtn = document.getElementById('start');
 var hsBtn = document.getElementById('hs');
 var homeBtn = document.getElementById('bee');
@@ -63,25 +63,26 @@ function init(){
 
 
 function highScore() {
-mainScreen.replaceWith = ("High scores:");
-high1.replaceWith(hi1);
-high2.replaceWith(hi2);
-high3.replaceWith(hi3);
-high4.replaceWith(hi4);
-high5.replaceWith(hi5);
-high6.replaceWith(hi6);
-high7.replaceWith(hi7);
-high8.replaceWith(hi8);
-high9.replaceWith(hi9);
-high10.replaceWith(hi10);}
+mainScreen.textContent = ("High scores:");
+high1.append(hi1);
+high2.append(hi2);
+high3.append(hi3);
+high4.append(hi4);
+high5.append(hi5);
+high6.append(hi6);
+high7.append(hi7);
+high8.append(hi8);
+high9.append(hi9);
+high10.append(hi10);}
 
 
 function startGame(){
-    mainScreen.replaceWith(quest1.question);
-    an1.replaceWith(quest1.ans1);
-    an2.replaceWith(quest1.ans2);
-    an3.replaceWith(quest1.ans3);
-    an4.replaceWith(quest1.ans4);
+    mainScreen.textContent = (quest1.question);
+    an1.append(quest1.ans1);
+    an2.append(quest1.ans2);
+    an3.append(quest1.ans3);
+    an4.append(quest1.ans4);
+    an3.addEventListener("click", function(){console.log(`3`)});
 }
 
 init();
