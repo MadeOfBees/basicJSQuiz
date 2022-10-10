@@ -85,20 +85,12 @@ function highScore() {
     high10.textContent=(hi10);
 }
 
-// This isn't working the way I expected...
-function refresh(){
-    an1.removeEventListener(click,)
-    an2.removeEventListener(click,)
-    an3.removeEventListener(click,)
-    an4.removeEventListener(click,)
-}
-// 
+
 
 function wrongAnswer(){
 alert(`Wrong answer`)
 }
 function startGame() {
-    refresh();
     var tScore = 1;
     smallScreen.style.listStyle = "square inside"
     mainScreen.textContent = (quest1.question);
@@ -112,7 +104,10 @@ function startGame() {
     an4.addEventListener("click", lv2);
 }
 function lv2(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", wrongAnswer);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", lv2);
     tScore = 2;
     mainScreen.textContent = (quest2.question);
     an1.textContent=(quest2.ans1);
@@ -125,7 +120,10 @@ function lv2(){
     an4.addEventListener("click", wrongAnswer);
 }
 function lv3(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", lv3);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", wrongAnswer);
     tScore = 3;
     mainScreen.textContent = (quest3.question);
     an1.textContent=(quest3.ans1);
@@ -138,7 +136,10 @@ function lv3(){
     an4.addEventListener("click", lv4);
 }
 function lv4(){
-    refresh();
+    an1.removeEventListener("click", lv4);
+    an2.removeEventListener("click", lv4);
+    an3.removeEventListener("click", lv4);
+    an4.removeEventListener("click", lv4);
     tScore = 4;
     mainScreen.textContent = (quest4.question);
     an1.textContent=(quest4.ans1);
@@ -151,7 +152,10 @@ function lv4(){
     an4.addEventListener("click", wrongAnswer);
 }
 function lv5(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", lv5);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", wrongAnswer);
     tScore = 5;
     mainScreen.textContent = (quest5.question);
     an1.textContent=(quest5.ans1);
@@ -164,7 +168,10 @@ function lv5(){
     an4.addEventListener("click", wrongAnswer);
 }
 function lv6(){
-    refresh();
+    an1.removeEventListener("click", lv6);
+    an2.removeEventListener("click", wrongAnswer);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", wrongAnswer);
     tScore = 6;
     mainScreen.textContent = (quest6.question);
     an1.textContent=(quest6.ans1);
@@ -177,7 +184,10 @@ function lv6(){
     an4.addEventListener("click", lv7);
 }
 function lv7(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", wrongAnswer);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", lv7);
     tScore =7;
     mainScreen.textContent = (quest7.question);
     an1.textContent=(quest7.ans1);
@@ -190,7 +200,10 @@ function lv7(){
     an4.addEventListener("click", lv8);
 }
 function lv8(){
-    refresh();
+    an1.removeEventListener("click", lv8);
+    an2.removeEventListener("click", lv8);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", lv8);
     tScore =8;
     mainScreen.textContent = (quest8.question);
     an1.textContent=(quest8.ans1);
@@ -203,7 +216,10 @@ function lv8(){
     an4.addEventListener("click", wrongAnswer);
 }
 function lv9(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", wrongAnswer);
+    an3.removeEventListener("click", lv9);
+    an4.removeEventListener("click", wrongAnswer);
     tScore =9;
     mainScreen.textContent = (quest9.question);
     an1.textContent=(quest9.ans1);
@@ -216,7 +232,10 @@ function lv9(){
     an4.addEventListener("click", wrongAnswer);
 }
 function lv10(){
-    refresh();
+    an1.removeEventListener("click", wrongAnswer);
+    an2.removeEventListener("click", lv10);
+    an3.removeEventListener("click", wrongAnswer);
+    an4.removeEventListener("click", wrongAnswer);
     tScore =10;
     mainScreen.textContent = (quest10.question);
     an1.textContent=(quest10.ans1);
@@ -227,9 +246,14 @@ function lv10(){
     an2.addEventListener("click", saveHs);
     an3.addEventListener("click", saveHs);
     an4.addEventListener("click", saveHs);
+    
+
 }
 function saveHs(){
-    refresh();
+    an1.removeEventListener("click", saveHs);
+    an2.removeEventListener("click", saveHs);
+    an3.removeEventListener("click", saveHs);
+    an4.removeEventListener("click", saveHs);
     console.log(`save user high score`)
 }
 
