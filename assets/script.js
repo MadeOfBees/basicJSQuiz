@@ -47,31 +47,33 @@ const quest4 = new Question(`What is javascript?`, `Fish`, `Java`, `Tea`, `A lan
 const quest5 = new Question(`What is javascript?`, `Fish`, `Java`, `Tea`, `A language`)
 
 function init(){
-mainScreen.textContent(gameState);
+mainScreen.replaceWith(gameState);
 }
 
 
 function highScore(gameState) {
+    window.location.replace("./highScores.html");
     gameState = ("High scores")
-    mainScreen.textContent = (gameState);
-    high1.textContent(hi1);
-    high2.textContent(hi2);
-    high3.textContent(hi3);
-    high4.textContent(hi4);
-    high5.textContent(hi5);
-    high6.textContent(hi6);
-    high7.textContent(hi7);
-    high8.textContent(hi8);
-    high9.textContent(hi9);
-    high10.textContent(hi10);
+    mainScreen.replaceWith = (gameState);
+    high1.replaceWith(hi1);
+    high2.replaceWith(hi2);
+    high3.replaceWith(hi3);
+    high4.replaceWith(hi4);
+    high5.replaceWith(hi5);
+    high6.replaceWith(hi6);
+    high7.replaceWith(hi7);
+    high8.replaceWith(hi8);
+    high9.replaceWith(hi9);
+    high10.replaceWith(hi10);
 }
 
 function startGame(){
-    mainScreen.textContent(quest1.question);
-    an1.textContent(quest1.ans1);
-    an2.textContent(quest1.ans2);
-    an3.textContent(quest1.ans3);
-    an4.textContent(quest1.ans4);
+    window.location.replace("./gameScreen.html");
+    mainScreen.replaceWith(quest1.question);
+    an1.replaceWith(quest1.ans1);
+    an2.replaceWith(quest1.ans2);
+    an3.replaceWith(quest1.ans3);
+    an4.replaceWith(quest1.ans4);
 }
 
 
