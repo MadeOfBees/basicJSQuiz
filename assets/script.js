@@ -59,6 +59,7 @@ const quest9 = new Question(`What is javascript?`, `Fish`, `Java`, `Tea`, `A lan
 const quest10 = new Question(`What is javascript?`, `Fish`, `Java`, `Tea`, `A language`)
 
 function init() {
+    smallScreen.style.listStyle = "none"
     if (sScreen) {
         highScore();
     } else {
@@ -71,6 +72,7 @@ function init() {
 
 function highScore() {
     mainScreen.textContent = ("High scores:");
+    smallScreen.style.listStyle = "square inside"
     high1.append(hi1);
     high2.append(hi2);
     high3.append(hi3);
@@ -85,6 +87,7 @@ function highScore() {
 
 
 function startGame() {
+    smallScreen.style.listStyle = "square inside"
     mainScreen.textContent = (quest1.question);
     an1.append(quest1.ans1);
     an2.append(quest1.ans2);
