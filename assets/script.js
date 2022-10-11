@@ -26,6 +26,7 @@ var sScreen
 var hScreen
 var gScreen
 var tLeft = 45;
+var oldScore = localStorage.getItem(`pScore`);
 
 function setTimer() {
     var timerInterval = setInterval(function() {
@@ -63,7 +64,6 @@ const quest7 = new Question(`Who's gonna get a 100 on this assigment?`, `The sma
 const quest8 = new Question(`What question are we on?`, `6`, `9`, `8`, `2`)
 const quest9 = new Question(`What is HTML?`, `Fish`, `The skeleton of our website`, `Tea`, `A Yeti`)
 const quest10 = new Question(`Are you glad this test is over?`, `Yes`, `Absolutely`, `Certainly`, `For sure`)
-
 function init() {
     smallScreen.style.listStyle = "none"
     if (sScreen) {
@@ -264,6 +264,8 @@ function highScore() {
     high8.textContent=(0);
     high9.textContent=(0);
     high10.textContent=(0);
-    if(pScore){high1.textContent = localStorage.getItem(pScore)}
-}
+    if (oldScore !== null) {
+    high1.textContent = localStorage.getItem(`pScore`);
+}}
+
 init();
