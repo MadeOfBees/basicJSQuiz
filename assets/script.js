@@ -20,19 +20,26 @@ var high7 = document.getElementById('hs7');
 var high8 = document.getElementById('hs8');
 var high9 = document.getElementById('hs9');
 var high10 = document.getElementById('hs10');
-var hi1 = `J Romero`;
-var hi2 = `J Carmack`;
-var hi3 = `T Hall`;
-var hi4 = `R Prince`;
-var hi5 = `A Carmack`;
-var hi6 = `J Romero`;
-var hi7 = `T Hall`;
-var hi8 = `J Carmack`;
-var hi9 = `S Peterson`;
-var hi10 = `K Cloud`;
+var time = document.getElementById('timer');
+var tScore
 var sScreen
 var hScreen
 var gScreen
+var tLeft = 45;
+var oldScore = localStorage.getItem(`pScore`);
+
+function setTimer() {
+    var timerInterval = setInterval(function() {
+      tLeft--;
+      time.textContent = tLeft;
+      if(tLeft === 0) {
+        clearInterval(timerInterval);
+        saveHs;
+      }
+  
+    }, 1000);
+  }
+
 // Basic Nav interaction
 startBtn.addEventListener("click", function () { { window.location.replace("./gameScreen.html"); } });
 hsBtn.addEventListener("click", function () { { window.location.replace("./highScores.html"); } });
@@ -57,7 +64,6 @@ const quest7 = new Question(`Who's gonna get a 100 on this assigment?`, `The sma
 const quest8 = new Question(`What question are we on?`, `6`, `9`, `8`, `2`)
 const quest9 = new Question(`What is HTML?`, `Fish`, `The skeleton of our website`, `Tea`, `A Yeti`)
 const quest10 = new Question(`Are you glad this test is over?`, `Yes`, `Absolutely`, `Certainly`, `For sure`)
-
 function init() {
     smallScreen.style.listStyle = "none"
     if (sScreen) {
@@ -70,20 +76,7 @@ function init() {
 }
 
 
-function highScore() {
-    mainScreen.textContent = ("High scores:");
-    smallScreen.style.listStyle = "square inside"
-    high1.textContent=(hi1);
-    high2.textContent=(hi2);
-    high3.textContent=(hi3);
-    high4.textContent=(hi4);
-    high5.textContent=(hi5);
-    high6.textContent=(hi6);
-    high7.textContent=(hi7);
-    high8.textContent=(hi8);
-    high9.textContent=(hi9);
-    high10.textContent=(hi10);
-}
+
 
 
 
@@ -91,7 +84,8 @@ function wrongAnswer(){
 alert(`Wrong answer`)
 }
 function startGame() {
-    var tScore = 1;
+    setTimer();
+    tScore = 1;
     smallScreen.style.listStyle = "square inside"
     mainScreen.textContent = (quest1.question);
     an1.textContent=(quest1.ans1);
@@ -255,6 +249,23 @@ function saveHs(){
     an3.removeEventListener("click", saveHs);
     an4.removeEventListener("click", saveHs);
     console.log(`save user high score`)
+    localStorage.setItem(`pScore`, tScore);
 }
+function highScore() {
+    mainScreen.textContent = ("High scores:");
+    smallScreen.style.listStyle = "square inside"
+    high1.textContent=(0);
+    high2.textContent=(0);
+    high3.textContent=(0);
+    high4.textContent=(0);
+    high5.textContent=(0);
+    high6.textContent=(0);
+    high7.textContent=(0);
+    high8.textContent=(0);
+    high9.textContent=(0);
+    high10.textContent=(0);
+    if (oldScore !== null) {
+    high1.textContent = localStorage.getItem(`pScore`);
+}}
 
 init();
