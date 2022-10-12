@@ -20,7 +20,7 @@ Click on correct answers to advance through 10 levels, at the end of the quiz (o
 MIT
 
 ## Features
-10 levels 
+10 levels, a timer and a high score page using local storage 
 
 ## How can I help?
 Giv me your code plz
